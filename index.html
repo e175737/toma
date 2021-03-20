@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>toma</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var setImg = '#photo';
+			var fadeSpeed = 1600;
+			var switchDelay = 5000;
+		
+			$(setImg).children('img').css({opacity:'0'});
+			$(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'-10'},fadeSpeed);
+		
+			setInterval(function(){
+				$(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+			},switchDelay);
+		});
+		</script>
+	</head>
+	
+	
+	
+	<body>
+		
+		<div class="header">
+			<a href="#" class="header-logo">Ayaka Toma's Portofolio</a>
+			<div class="header-list">
+			<ul>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Work">Work</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+			</div>
+		</div><!--header-->
+		
+		
+		
+		<div class="main">
+			
+			<div id="photo">
+				<img src="30250.jpg"  alt="">
+				<img src="30249.jpg"  alt="">
+				<img src="30255.jpg"  alt="">
+				<img src="30263.jpg"  alt="">
+			</div>
+	
+		
+			<div id="About" class="contents">
+	
+				<h1 class="section-title">About</h1>
+				
+				<div class="contents-item">
+					<div class="pic">
+					<img src="icon.jpg" width="140px">
+					</div>
+					<div class="profile-text">
+						<p>名前 : 當間 彩加（Ayaka Toma）</p>
+						<p>誕生日 : 1998年11月12日</p>
+						<p>出身地 : 沖縄県石垣市</p>
+						<p>趣味 :  脱出ゲーム、謎解き、ボードゲーム、ペンシルパズル、アニメ、漫画</p>
+					</div>
+					<div class="profile-text">
+						<table>
+						<tr><th>スキル</th></tr>
+						<tr><td>python</td><td>★★★★☆</td></tr>
+						<tr><td>java</td><td>★★★☆☆</td></tr>
+						<tr><td>c</td><td>★★☆☆☆</td></tr>
+						<tr><td>html</td><td>★★☆☆☆</td></tr>
+						<tr><td>css</td><td>★★☆☆☆</td></tr>
+						<tr><td>swift</td><td>★★☆☆☆</td></tr>
+						<tr><td>mysql</td><td>★☆☆☆☆</td></tr>
+						</table>
+					</div>
+					
+				</div>
+			</div>
+	
+		
+			<div id="Work" class="contents">
+				<h1 class="section-title">Work</h1>
+				
+				<div class="contents-item">
+					<div class="work-pic">
+						<img src="booklog.png" width="400px">
+					</div>
+					<div class="work-text">
+						<p class="app-name">BookLog</p>
+						<img src="appicon.jpeg" width="150px">
+						<p>本の保管場所を管理するアプリ。</p>
+					</div>
+				</div>
+			</div>
+	
+		
+			<div id="Contact" class="contents">
+				<h1 class="section-title">Contact</h1>
+				
+				<div class="contents-item">
+					<p>メール: nikajm39@gmail.com</p>
+				</div>
+			</div>
+			
+		</div><!--main-->
+	
+	
+		<div class="footer">
+		<!--<div class="footer-logo">"Copyright(c) 2021 Ayaka Toma All Rights Reserved."</div> -->
+		</div>
+	
+	</body>
+</html>
